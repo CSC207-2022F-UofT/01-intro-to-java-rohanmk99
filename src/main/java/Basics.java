@@ -17,6 +17,7 @@
  */
 public class Basics {
 
+
     /**
      *  2. In Python, we could have code in a block labelled:
      *        if __name__ == '__main__':
@@ -38,11 +39,14 @@ public class Basics {
          *
          *    (Relevant reading: 1.1.3. Printing things)
          */
-        System.out.println(7 + 5);
+
+
 
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        System.out.println("Hello World");
+
 
 
 
@@ -58,10 +62,18 @@ public class Basics {
          *    (Relevant reading: 1.2. Variables and Types)
          */
 
+ 
+
         /*
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+
+         int my_variable=100;
+
+          
+         
+        
 
 
 
@@ -69,6 +81,8 @@ public class Basics {
          * you should see the message "my_variable's value is 100" if you run
          * this file!
          */
+
+        
         System.out.println("my_variable's value is " + my_variable);
 
         /* 5. In Python, we could write a loop that iterates using:
@@ -99,6 +113,10 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+
+        for(int i=0;i<=100;i++){
+            System.out.println("Current count: "+i);
+        }
 
 
     }
@@ -144,6 +162,13 @@ public class Basics {
 
         // Fill in the rest of the body here
 
+         ret=ret.append(to_split.charAt(0));
+         for(int i=0;i<to_split.length();i++){
+             if(to_split.charAt(i)==' '){
+                 ret=ret.append(to_split.charAt(i+1));
+             }
+         }
+        
         return ret.toString();
     }
 
@@ -163,6 +188,11 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
+        for(int i=0;i<arr.length;i++){
+            if(i%2!=0){
+                current_sum+=arr[i];
+            }
+        }
 
         /* TODO (Task 5): Complete this method body using a for-loop.
          *                You can find the length of an array by using the
@@ -170,6 +200,10 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+    
+
+
+        
 
         return current_sum;
     }
