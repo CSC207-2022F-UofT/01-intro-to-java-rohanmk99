@@ -114,7 +114,7 @@ public class Basics {
          * Current count: 0
          */
 
-        for(int i=0;i<=100;i++){
+        for(int i=10;i>=0;i--){
             System.out.println("Current count: "+i);
         }
 
@@ -161,11 +161,9 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
 
         // Fill in the rest of the body here
-
-        for(int i=0;i<to_split.length();i++){
-            if(to_split.charAt(i)==' '){
-                ret.append(to_split.charAt(i+1));
-            }
+        String[] words=to_split.split(" ");
+        for(int i=0;i<7;i++){
+            ret.append(words[i].charAt(1));
         }
         
         return ret.toString();
