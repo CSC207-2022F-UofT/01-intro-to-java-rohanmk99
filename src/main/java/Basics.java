@@ -45,7 +45,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
-        System.out.println("Hello World");
+        System.out.println("Hello World!");
 
 
 
@@ -162,12 +162,11 @@ public class Basics {
 
         // Fill in the rest of the body here
 
-         ret=ret.append(to_split.charAt(0));
-         for(int i=0;i<to_split.length();i++){
-             if(to_split.charAt(i)==' '){
-                 ret=ret.append(to_split.charAt(i+1));
-             }
-         }
+        for(int i=0;i<to_split.length();i++){
+            if(to_split.charAt(i)==' '){
+                ret.append(to_split.charAt(i+1));
+            }
+        }
         
         return ret.toString();
     }
@@ -188,11 +187,7 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
-        for(int i=0;i<arr.length;i++){
-            if(i%2!=0){
-                current_sum+=arr[i];
-            }
-        }
+       
 
         /* TODO (Task 5): Complete this method body using a for-loop.
          *                You can find the length of an array by using the
@@ -201,7 +196,11 @@ public class Basics {
          *                (e.g. arr[i] gives you the item at index i).
          */
     
-
+        for(int i=0;i<arr.length;i++){
+            if(i%2!=0){
+                current_sum+=arr[i];
+            }
+        }
 
         
 
